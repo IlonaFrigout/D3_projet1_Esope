@@ -5,8 +5,13 @@ De cette manière nous pouvons laisser des messages pour d'autres codeurs et des
 
 Nous découvrons ici la possibilité d'utiliser des selectors composés ex : header ul  Ceci permet, par exemple, de cibler les elements de la liste du header sans affecter ceux du footer.
  */
+
 header {
-  background: rgb(20, 56, 53);
+  display: flex;
+  justify-content:space-evenly;
+}
+header {
+  background-color: #f4f4f4;
   padding: 12px;
 }
 
@@ -16,12 +21,12 @@ header ul {
 
 header li {
   display: inline-block;
-  border: 1px solid #4fb2aa;
+  border: 3px solid #604344;
 }
 
 header a {
   text-decoration: none;
-  color : #4fb2aa;
+  color : #604344;
   padding: 12px;
   display: block;
 }
@@ -32,8 +37,9 @@ header a {
 3. une hauteur minimal à la div. (pour comprendre ce qu'est une VH : https://css-tricks.com/the-lengths-of-css/)
 */
 .hero {
-  background: rgb(20, 56, 53) url('images/premier.jpg') top center no-repeat;
-  color : #4fb2aa;
+ background: rgb(255, 246, 233) url('images/book.jpg') top center no-repeat;
+  color : #fff;
+  width: 100%;
   min-height: 100vh;
   background-attachment: fixed;
 }
@@ -43,22 +49,23 @@ header a {
 2. Nous utilsons des classes pour permettre d'aleterner visuellement les sections.
 */
 section {
-  min-height: 90vh;
+  min-height: 60vh;
   padding: 42px;
 }
 
+
 .odd {
-  background: rgb(20, 56, 53);
+  background: rgb(105, 85, 81);
 }
-  .even {
-  background: rgb(20, 56, 53);
+.even {
+  background: rgb(244, 244, 244);
 }
 
 /* Nous souhaitons que les images soient responsives... c'est à dire n'éxcèdent pas une certaine largeur ET se redimensionnent avec leur parent */
 
 .image-block {
-  max-width: 340px;
-  border: 12px solid #4fb2aa;
+  max-width: 400px;
+  max-width: 600px;
 }
 
 .image-block img {
@@ -66,22 +73,25 @@ section {
 display:block;
 }
 
-figcaption {
-  font-family: 'Fahkwang', serif;
-  font-style: italic;
-
-}
 
 footer {
   min-height: 150px;
-  background: #4fb2aa;
-  color : #000000;
+  background-color: #f4f4f4;
+  color: #000000;
 }
 
-#section01{
-  display:flex;
+section{
+  display: flex;
+  justify-content: space-around;
 }
 
+.odd{
+  flex-direction:row-reverse;
+}
+
+.content{
+flex-basis:480px;
+}
 /*
 
 // Small devices
